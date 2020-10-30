@@ -1,12 +1,17 @@
 @ECHO OFF
 if [%1]==[] goto Erreur
 set all="%*"
+@ECHO OFF
+echo ************
 @ECHO ON
-echo ************
 git add *
+@ECHO OFF
 echo ************
+@ECHO ON
 git commit -m %all%
+@ECHO OFF
 echo ************
+@ECHO ON
 git push -u origin --all
 @ECHO OFF
 GOTO Fin
@@ -16,6 +21,8 @@ echo Ne pas mettre d'accent et de guillemets!
 echo Exemple:
 echo pushAll.bat Nouvelle mise à jour des commentaires et du script push
 :Fin
+@ECHO OFF
 echo ************
+@ECHO ON
 git status
 PAUSE
