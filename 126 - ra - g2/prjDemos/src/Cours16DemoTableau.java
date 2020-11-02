@@ -1,5 +1,5 @@
-public class Cours15DemoTableau {
-    public Cours15DemoTableau() {
+public class Cours16DemoTableau {
+    public Cours16DemoTableau() {
         demoDeclarationTableau();
         testerCreerTableauDouble();
     }
@@ -72,6 +72,6 @@ public class Cours15DemoTableau {
 
     public static void main(String[] args) {
 
-        new Cours15DemoTableau();
+        new Cours16DemoTableau();
     }
 }

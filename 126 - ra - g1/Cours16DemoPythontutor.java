@@ -1,7 +1,7 @@
 //http://www.pythontutor.com/java.html#mode=edit
 
-public class DemoTableau {
-    public DemoTableau() {
+public class Cours16DemoPythontutor {
+    public Cours16DemoPythontutor() {
         int tab[];
         int a;
         
@@ -18,6 +18,6 @@ public class DemoTableau {
     }
 
    public static void main(String[] args) {
-        new DemoTableau();
+        new Cours16DemoPythontutor();
     }
 }

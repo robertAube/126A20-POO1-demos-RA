@@ -1,7 +1,7 @@
 @ECHO OFF
+cls
 if [%1]==[] goto Erreur
 set all="%*"
-@ECHO OFF
 echo ************
 @ECHO ON
 git add *
@@ -25,4 +25,5 @@ echo pushAll.bat Nouvelle mise à jour des commentaires et du script push
 echo ************
 @ECHO ON
 git status
+@ECHO OFF
 PAUSE
