@@ -1,18 +1,36 @@
 public class Cours17DemoTableau {
     public Cours17DemoTableau() {
-        char ticTacToe[][] = {{' ', 'x', ' '}, {' ', 'x', ' '}, {' ', 'x', ' '}};
-
-        afficherTableau2D(ticTacToe);
+        demoModifierTableau();
     }
 
-    private void afficherTableau2D(char[][] tableau2D) {
-        for (int i = 0; i < tableau2D.length; i++) {
-            afficherTableau(tableau2D[i]);
+    private void demoModifierTableau() {
+        int[] tab = {1, 2, 3, 4};
+        int newVal = 0;
+
+        afficherTabInt(tab);
+        initTabWithVal(tab, newVal);
+        afficherTabInt(tab);
+        System.out.println(newVal);
+        initTabWithValInc(tab, 5);
+        afficherTabInt(tab);
+    }
+
+    private void initTabWithVal(int[] tableau, int newVal) {
+        for (int i = 0; i < tableau.length; i++) {
+            tableau[i] = newVal;
         }
-        System.out.println();
+
+        newVal = 99; //ligne inutile: on ne peut pas modifier newVal
     }
 
-    private void afficherTableau(char[] tab) {
+
+    private void initTabWithValInc(int[] tableau, int newVal) {
+        for (int i = 0; i < tableau.length; i++) {
+            tableau[i] = newVal++;
+        }
+    }
+
+    private void afficherTabInt(int[] tab) {
         String seperateur;
         String s = "[";
 

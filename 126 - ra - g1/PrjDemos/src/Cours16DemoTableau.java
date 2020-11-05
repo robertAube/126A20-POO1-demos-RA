@@ -17,14 +17,14 @@ public class Cours16DemoTableau {
         afficherTableauDouble(tabDouble);
     }
 
-    //Créer un tableau de double de longueur N initialisé avec la valeur v dans tous les éléments du tableau
-    private double[] creerTableauDouble(int n, double v) {
+    //Créer un tableau de double de longueur initialisé avec la valeur dans tous les éléments du tableau
+    private double[] creerTableauDouble(int longueur, double valeur) {
         double [] tabRetour;
 
-        tabRetour = new  double[n];
+        tabRetour = new  double[longueur];
 
         for (int i = 0; i < tabRetour.length; i++) {
-            tabRetour[i] = v;
+            tabRetour[i] = valeur;
         }
 
         return tabRetour;
