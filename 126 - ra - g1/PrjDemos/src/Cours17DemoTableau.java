@@ -19,7 +19,6 @@ public class Cours17DemoTableau {
         for (int i = 0; i < tableau.length; i++) {
             tableau[i] = newVal;
         }
-
         newVal = 99; //ligne inutile: on ne peut pas modifier newVal
     }
 
