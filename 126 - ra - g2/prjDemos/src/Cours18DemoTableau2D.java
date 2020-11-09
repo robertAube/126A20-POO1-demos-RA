@@ -1,3 +1,5 @@
+package prjDemos.src;
+
 //http://www.pythontutor.com/java.html#mode=edit
 public class Cours18DemoTableau2D {
     public Cours18DemoTableau2D() {
@@ -40,7 +42,7 @@ public class Cours18DemoTableau2D {
     ////////////////////////////////////////////////////////////////////////////
     private void demoTableau2D() {
         int[] t1 = {1, 2, 3, 4};
-        int[][] t2d = {{1, 2, 3}, {3, 4, 5}, {6, 7, 8}, {9, 10, 11}};
+        int[][] t2d = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
 
         afficherTabInt(t1);
 
