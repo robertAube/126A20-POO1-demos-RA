@@ -26,6 +26,7 @@ public class Cours18DemoTableau2D {
     private double getMinimum(double[] tab) {
         double minimum;
 
+        //détecte une erreur si le tableau est vide
         if (tab.length == 0) {
             throw new ArrayIndexOutOfBoundsException("Erreur: le tableau est vide.");
         }
@@ -44,7 +45,7 @@ public class Cours18DemoTableau2D {
         int[] t1 = {1, 2, 3, 4};
         int[][] t2d = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
 
-        afficherTabInt(t1);
+        System.out.println( afficherTabInt(t1));
 
         System.out.println("Ligne 0: Colonne 0 = " + t2d[0][0]);
         System.out.println("Ligne 3: Colonne 0 = " + t2d[3][0]);
