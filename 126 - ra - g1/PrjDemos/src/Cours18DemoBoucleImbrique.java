@@ -11,13 +11,15 @@ public class Cours18DemoBoucleImbrique {
         tab2D[1][0] = 44;
         System.out.println(afficherTabInt(vecteur));
 
-        System.out.println(afficherTabInt2DV2(tab2D));
+        System.out.println(afficherTabInt2DV1(tab2D));
     }
 
     private String afficherTabInt2DV1(int[][] tableau2D) {
         String s = "";
         for (int ligne = 0; ligne < tableau2D.length; ligne++) {
+            s += ligne == 0 ? "[" : ", [";
             s += afficherTabInt(tableau2D[ligne]);
+            s += "]";
         }
         return s;
     }
@@ -27,6 +29,7 @@ public class Cours18DemoBoucleImbrique {
         String s = "";
         for (int ligne = 0; ligne < tableau2D.length; ligne++) {
             s += ligne == 0 ? "[" : ", [";
+            //traiter la ligne
             for (int colonne = 0; colonne < tableau2D[ligne].length; colonne++) {
                 s += colonne == 0 ? "" : ", ";
                 s += tableau2D[ligne][colonne];

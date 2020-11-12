@@ -1,5 +1,3 @@
-package prjDemos.src;
-
 //http://www.pythontutor.com/java.html#mode=edit
 public class Cours18DemoTableau2D {
     public Cours18DemoTableau2D() {
