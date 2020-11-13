@@ -1,7 +1,28 @@
 public class RectangleTest {
     public RectangleTest() {
-        Rectangle r1 = new Rectangle(); //instanciation de mon rectangle en objet (ou instance)
-        Rectangle r2 = new Rectangle(); //instanciation de mon rectangle en objet (ou instance)
+        testerConstanteStatic();
+    }
+
+    private void testerConstanteStatic() {
+      //  Rectangle.DEFAULT_LARGEUR = 0; //impossible de modifier une variable final (constante)
+        System.out.println("Valeur de la constante largeur par défaut : " + Rectangle.DEFAULT_LARGEUR);
+    }
+
+    private void testerToString() {
+        Rectangle r1 = new Rectangle(2, 4); //instanciation de mon rectangle en objet (ou instance)
+        Rectangle r2 = new Rectangle(5,1); //instanciation de mon rectangle en objet (ou instance)
+
+        //  testerGetSet();
+        System.out.println(r1.toString());
+        System.out.println(r2);
+    }
+
+    private void testerGetSet() {
+        Rectangle r1 = new Rectangle(2, 4); //instanciation de mon rectangle en objet (ou instance)
+        Rectangle r2 = new Rectangle(5,1); //instanciation de mon rectangle en objet (ou instance)
+
+        System.out.println(r1.getHauteur());
+        System.out.println(r1.getLargeur());
 
         r1.setLargeur(3);
         System.out.println(r1.getLargeur());
@@ -10,6 +31,8 @@ public class RectangleTest {
 //        Rectangle.hauteur = 2;
 //        r.hauteur = 2;
 //        r.largeur = 1;
+//        r2.setLargeur(-2); //produit une Exception in thread "main" java.lang.IllegalArgumentException: Largeur invalide : -2
+        System.out.println(r2.getLargeur());
     }
 
     public static void main(String[] args) {
