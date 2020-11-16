@@ -18,6 +18,12 @@ public class Rectangle {
         setLargeur(largeur);
     }
 
+    public int getAir() {
+        int air;
+        air = largeur * hauteur;
+        return air;
+    }
+
     public int getHauteur() {
         return hauteur;
     }
@@ -57,10 +63,9 @@ public class Rectangle {
     @Override
     public String toString() {
         String s;
-        s = "Rectangle{" +
-                "hauteur=" + hauteur +
-                ", largeur=" + largeur +
-                '}';
+        s = "C'est un rectangle: ";
+        s += "\nhauteur=" + hauteur + ", largeur=" + largeur;
+        s += "\nAir = " + getAir();
         return s;
     }
 

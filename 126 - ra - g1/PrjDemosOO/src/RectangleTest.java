@@ -1,24 +1,54 @@
+import org.w3c.dom.css.Rect;
+
 public class RectangleTest {
     public RectangleTest() {
 
         //       testerGetSet();
         //   testerToString();
         //  testerVariableFinal();
-        testerValiderHauteurLargeur();
+        //testerValiderHauteurLargeur();
+        testerGetAir();
 
+    }
+
+    private void testerGetAir() {
+        Rectangle r1;
+        Rectangle r2;
+
+        r1 = new Rectangle(3,2);
+        System.out.println(r1);
+        System.out.println("A un air de : " + r1.getAir());
+        r2 = new Rectangle(4,5);
+        System.out.println(r2);
+        System.out.println("A un air de : " + r2.getAir());
     }
 
     private void testerValiderHauteurLargeur() {
         Rectangle r1;
         int hauteur;
+        int largeur;
 
-        hauteur = -2;
+        hauteur = -3;
+        largeur = 2;
 
-
-        if (Rectangle.hauteurEstValide(hauteur)) {
-            r1 = new Rectangle(hauteur, 0);
+        //hauteurEstValide & largeurEstValide ont été déclarés static pour que l'on puisse les accéder sans instance.
+        if (Rectangle.hauteurEstValide(hauteur) && Rectangle.largeurEstValide(largeur)) {
+            r1 = new Rectangle(hauteur, largeur);
             System.out.println(r1);
+        } else {
+            System.out.println("Le rectangle n'a pas pu être créé hauteur & largeur doivent être positifs " + hauteur + ", " + largeur);
         }
+
+        hauteur = 3;
+
+        //hauteurEstValide & largeurEstValide ont été déclarés static pour que l'on puisse les accéder sans instance.
+        if (Rectangle.hauteurEstValide(hauteur) && Rectangle.largeurEstValide(largeur)) {
+            r1 = new Rectangle(hauteur, largeur);
+            System.out.println(r1);
+        } else {
+            System.out.println("Le rectangle n'a pas pu être créé hauteur & largeur doivent être positifs " + hauteur + ", " + largeur);
+        }
+
     }
 
     private void testerVariableFinal() {
@@ -26,7 +56,7 @@ public class RectangleTest {
 
         a = Rectangle.DEFAULT_HAUTEUR;
 
-//        System.out.println(Math.PI);
+        System.out.println(Math.PI);
 
         //    Rectangle.DEFAULT_HAUTEUR = 3;  //impossible c'Est une constante.
 
