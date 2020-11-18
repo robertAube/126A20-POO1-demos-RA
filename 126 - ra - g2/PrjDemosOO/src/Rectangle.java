@@ -2,7 +2,7 @@ public class Rectangle {
     //public = accessibilité possible à l'extérieur de la classe
     //static = n'a pas pas besoin d'être instancié pour l'utiliser. (Pas besoin de faire un new) 1 et 1 seul par classe.
     //final = constante ne peut pas être modifiée et obligation de définir sur le champ.
-    public static final int DEFAULT_HAUTEUR = 0;
+    public static final int DEFAULT_HAUTEUR = 0; //constante
     public static final int DEFAULT_LARGEUR = 0;
 
     //attributs d'un rectangle (variables d'instance) Ces variables existent seulement si j'ai un objet ou instance
@@ -11,7 +11,7 @@ public class Rectangle {
 
     //contructeur par défaut
     public Rectangle() {
-        this(DEFAULT_HAUTEUR, DEFAULT_HAUTEUR); //ici this est utilisé pour appeler un autre constructeur. Doit être la première instruction du constructeur.
+        this(DEFAULT_HAUTEUR, DEFAULT_LARGEUR); //ici this est utilisé pour appeler un autre constructeur. Doit être la première instruction du constructeur.
         System.out.println("Rectangle() - constructeur par défaut - " + toString());
     }
 
@@ -24,6 +24,12 @@ public class Rectangle {
         int air;
         air = largeur * hauteur;
         return air;
+    }
+
+    public int getPerimetre() {
+        int perimetre;
+        perimetre = 2 * this.hauteur + 2 * this.largeur;
+        return perimetre;
     }
 
     //accesseur (getter)
@@ -71,6 +77,7 @@ public class Rectangle {
         s += "Rectangle : ";
         s += "hauteur=" + hauteur + ", largeur=" + largeur;
         s += " air=" + getAir();
+        s += " perimètre=" + getPerimetre();
 
         return s;
     }

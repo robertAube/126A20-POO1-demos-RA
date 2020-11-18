@@ -9,9 +9,9 @@ public class RectangleTest {
 
         System.out.println(r1.getAir());
         System.out.println(r2.getAir());
+        System.out.println(r1.getPerimetre());
         System.out.println(r1);
-        System.out.println(r2);
-
+        System.out.println(r2.toString());
     }
 
     private void testerValiderHautLarg() {
