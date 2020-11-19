@@ -130,7 +130,7 @@ public class Formatif5Boucle {
         System.out.println("5. i=" + i + " limite=" + limite);
     }
 
-    public static int lireInt(String question) {
+    public int lireInt(String question) {
         String reponse;
         int reponseInt;
 
@@ -140,7 +140,7 @@ public class Formatif5Boucle {
         return reponseInt;
     }
 
-    public static String lireString(String question) {
+    public String lireString(String question) {
         Scanner sc;
         String reponse;
 

@@ -5,12 +5,14 @@ public class Rectangle {
     public static final int DEFAULT_HAUTEUR = 0;
     public static final int DEFAULT_LARGEUR = 0;
     //attributs d'un rectangle (variables d'instance). Ces variables existent seulement si j'ai un objet ou instance
-    private int hauteur; //on met une visiblité private pour encapsuler ces données (Non accessivble à l'extérieur de la classe)
+    private int hauteur; //on met une visiblité private pour encapsuler ces données (Non accessible à l'extérieur de la classe)
     private int largeur;
+
 
     public Rectangle() {
         this(DEFAULT_HAUTEUR, DEFAULT_LARGEUR); //ici this est utilisé pour appeler un autre contructeur. Doit être la première instruction du constructeur
-       // System.out.println("Rectangle - coustructeur par défaut");
+        System.out.println("Rectangle - coustructeur par défaut");
+
     }
 
     public Rectangle(int hauteur, int largeur) {
@@ -60,7 +62,6 @@ public class Rectangle {
         return estValide;
     }
 
-    @Override
     public String toString() {
         String s;
         s = "C'est un rectangle: ";

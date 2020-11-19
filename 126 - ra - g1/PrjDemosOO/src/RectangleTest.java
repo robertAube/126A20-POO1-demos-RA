@@ -9,14 +9,18 @@ public class RectangleTest {
         //testerValiderHauteurLargeur();
         testerGetAir();
 
+
     }
 
     private void testerGetAir() {
         Rectangle r1;
         Rectangle r2;
+        int h = 2;
+        int l = -4;
 
         r1 = new Rectangle(3,2);
-        System.out.println(r1);
+
+        System.out.println(r1.toString());
         System.out.println("A un air de : " + r1.getAir());
         r2 = new Rectangle(4,5);
         System.out.println(r2);
