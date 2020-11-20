@@ -1,5 +1,3 @@
-package Carte;
-
 public class CarteTest {
     private boolean testReussi;
     private String descriptionTest;
