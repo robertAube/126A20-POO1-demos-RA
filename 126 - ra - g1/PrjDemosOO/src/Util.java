@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Util {
+
    public static int lireEntierValide (String question, int valeurMin, int valeurMax) {
         int valeurUsager;
 

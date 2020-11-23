@@ -7,16 +7,26 @@ public class RectangleTest {
         //   testerToString();
         //  testerVariableFinal();
         //testerValiderHauteurLargeur();
-        testerGetAir();
+//        testerGetAir();
+        testerEgalite();
+    }
 
+    private void testerEgalite() {
+        Rectangle r1 = new Rectangle(14,33);
+        Rectangle r2 = new Rectangle(14, 33);
+        String s = "chat";
 
+        s.equals(s);
+        System.out.println("r1 == r2 ? " +  (r1.equals(r2)));
     }
 
     private void testerGetAir() {
-        Rectangle r1;
+        Rectangle r1; //r1 est pour conserver une instance vs Rectangle c'Est la classe. (Structure de l'objet)
         Rectangle r2;
         int h = 2;
         int l = -4;
+
+        System.out.println(Rectangle.DEFAULT_HAUTEUR);
 
         r1 = new Rectangle(3,2);
 

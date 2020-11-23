@@ -43,7 +43,7 @@ public class CarteTest {
         descriptionTest = "Toutes les couleurs invalides ne passent pas.";
         testReussi = true;
         for (int i = 0; i < couleursInValides.length && testReussi ; i++) {
-            testReussi = !Carte.couleurEstValide(couleursInValides[i].toUpperCase());
+            testReussi = !Carte.couleurEstValide(couleursInValides[i]);
         }
         afficherResultatDuTest();
     }

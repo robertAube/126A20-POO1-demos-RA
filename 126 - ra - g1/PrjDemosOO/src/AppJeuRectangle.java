@@ -13,7 +13,7 @@ public class AppJeuRectangle {
 
         r = new Rectangle(hauteur, largeur);
 
-        System.out.println(r);
+        System.out.println(r.toString());
     }
 
     public static void main(String[] args) {

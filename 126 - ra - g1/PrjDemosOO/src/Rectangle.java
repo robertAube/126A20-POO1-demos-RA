@@ -41,7 +41,7 @@ public class Rectangle {
     //Cette méthode n'a pas accès aux attributs. C'est normal: je n'ai pas besoin d'instance pour l'utiliser.
     public static boolean hauteurEstValide(int hauteur) {
         boolean estValide;
-        estValide = hauteur >= 0;
+        estValide = (hauteur >= 0);
         return estValide;
     }
 
