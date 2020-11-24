@@ -9,8 +9,6 @@ public class CercleTest {
     }
 
     private void testerEstRayonValide() {
-        String[] couleursValides = {"pique", "trèfle", "carreau", "coeur"};
-
         System.out.println("* testerEstRayonValide()");
 
         System.out.println(Cercle.estRayonValide(-1) == false);
