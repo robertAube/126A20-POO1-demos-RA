@@ -9,6 +9,17 @@ public class Rectangle {
     private int hauteur;   //on les met de visibilité private pour qu'elle soit encapsulée (Non accessible à l'extérieur de la classe)
     private int largeur;
 
+    @Override
+    public boolean equals(Object o) { //Object : Toutes les instances peut importe le type sont des Object en java
+        if (this == o) return true; //Compare o avec l'adresse courante
+        if (o == null || !(o instanceof Rectangle)) return false;
+
+        Rectangle rectangle = (Rectangle) o; //Cast de l'objet en Rectangle.
+
+        if (this.hauteur != ((Rectangle) o).hauteur) return false;
+        return largeur == rectangle.largeur;
+    }
+
     //contructeur par défaut
     public Rectangle() {
         this(DEFAULT_HAUTEUR, DEFAULT_LARGEUR); //ici this est utilisé pour appeler un autre constructeur. Doit être la première instruction du constructeur.
