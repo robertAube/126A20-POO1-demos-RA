@@ -1,4 +1,8 @@
-package Carte;
+/*
+420-126 – tp4 - Jeu de carte
+Nom : Aubé
+Prénom : Robert
+*/
 
 public class CarteTest {
     private boolean testReussi;
