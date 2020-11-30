@@ -1,4 +1,4 @@
-import org.w3c.dom.css.Rect;
+
 
 public class RectangleTest {
     public RectangleTest() {
@@ -12,12 +12,43 @@ public class RectangleTest {
     }
 
     private void testerEgalite() {
-        Rectangle r1 = new Rectangle(14,33);
-        Rectangle r2 = new Rectangle(14, 33);
-        String s = "chat";
+        Rectangle r1 = new Rectangle(14, 33);
+        Rectangle r1HDif = new Rectangle(7, 33);
+        Rectangle r1LDif = new Rectangle(14, 3);
+        Rectangle r1Pareil = new Rectangle(14, 33);
+        Rectangle r1Ref = r1;
+        Rectangle rNull = null;
+        String s1 = "chat";
+        String s2 = "chat";
 
-        s.equals(s);
-        System.out.println("r1 == r2 ? " +  (r1.equals(r2)));
+        System.out.println("r1 == r2 ? " + (r1 == r1Pareil));
+        System.out.println("r1 == r1Ref ? " + (r1 == r1Ref));
+
+//        System.out.println("r1.equals(r2)" + r1.equals(r2));
+//        System.out.println(" s1.equals(s2)" + s1.equals(s2));
+
+        System.out.println("equals : la comparaison de la même instance devrait donner true");
+        System.out.println("r1.equals(r1) ? " + r1.equals(r1));
+        System.out.println("r1.equals(r1Ref) ? " + r1.equals(r1Ref));
+
+
+        System.out.println("equals : la comparaison avec un rectangle null retourne false");
+        System.out.println("r1.equals(rNull) ? = " + r1.equals(rNull));
+
+        System.out.println("equals : la comparaison d'une variable de types différents retourne false");
+        System.out.println("r1.equals(rNull) ? = " + r1.equals(s1));
+
+
+        System.out.println("equals : la comparaison de 2 instances de rectangle avec des hauteurs différentes retourne false");
+        System.out.println("r1.equals(r1HDif) ? " + r1.equals(r1HDif));
+
+        System.out.println("equals : la comparaison de 2 instances de rectangle avec des largeurs différentes retourne false");
+        System.out.println("r1.equals(r1LDif) ? " + r1.equals(r1LDif));
+
+        System.out.println("equals : la comparaison de 2 instances avec la même largeur et hauteur retourne vrai");
+        System.out.println("r1.equals(r1Pareil) ? " + r1.equals(r1Pareil));
+
+        // System.out.println("s1 == s2 ? " + (s1 == s2));
     }
 
     private void testerGetAir() {
@@ -28,11 +59,11 @@ public class RectangleTest {
 
         System.out.println(Rectangle.DEFAULT_HAUTEUR);
 
-        r1 = new Rectangle(3,2);
+        r1 = new Rectangle(3, 2);
 
         System.out.println(r1.toString());
         System.out.println("A un air de : " + r1.getAir());
-        r2 = new Rectangle(4,5);
+        r2 = new Rectangle(4, 5);
         System.out.println(r2);
         System.out.println("A un air de : " + r2.getAir());
     }

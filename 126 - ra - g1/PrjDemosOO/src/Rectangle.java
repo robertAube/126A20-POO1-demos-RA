@@ -62,6 +62,19 @@ public class Rectangle {
         return estValide;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        boolean egal;
+        if (this == o) return true; //Si c'Est la même instance.
+        if (o == null || getClass() != o.getClass()) return false; // si o est null ou les type d'instance ne sont pas les même, on retourne faux.
+
+        Rectangle rectangle = (Rectangle) o;
+
+        if (this.hauteur != rectangle.hauteur) return false;
+        return largeur == ((Rectangle)o).largeur;
+    }
+
+
     public String toString() {
         String s;
         s = "C'est un rectangle: ";
