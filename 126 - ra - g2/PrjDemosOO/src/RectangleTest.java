@@ -10,10 +10,14 @@ public class RectangleTest {
         Rectangle r2 = new Rectangle(10, 4); //instanciation de mon rectangle en objet (ou instance)
         Rectangle r3 = new Rectangle(2, 40); //instanciation de mon rectangle en objet (ou instance)
         Rectangle rNull = null;
+        Rectangle r4;
 
-        //donne Faux parce que les 2 variable font référence à 2 instances différentes
-        System.out.println("r1 == r1Copie" + (r1 == r1Copie));
-        //System.out.println("r1.equals(r2)" + r1.equals(r2));
+        r4 = r1; //R4 fait référence à la même instance.
+
+        //donne Faux parce que les 2 variables font référence à 2 instances différentes
+        System.out.println("r1 == r1Copie ? " + (r1 == r1Copie)); //retourne faux : 2 instance différentes
+        System.out.println("r1.equals(r2) ? " + r1.equals(r2)); //retourne faux : 2 instances différentes
+        System.out.println("(r1 == r4)  ? " + (r1 == r4)); //retourne vrai : r1 et r4 font référence à la même instance
 
         System.out.println("equals : la comparaison de la même instance devrait donner true");
         System.out.println(r1.equals(r1));
