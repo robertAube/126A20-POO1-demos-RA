@@ -11,18 +11,19 @@ public class RectangleTest {
         Rectangle r3 = new Rectangle(2, 40); //instanciation de mon rectangle en objet (ou instance)
         Rectangle rNull = null;
 
-        System.out.println("r1 == r2" + (r1 == r1Copie));
-        //    System.out.println("r1.equals(r2)" + r1.equals(r2));
+        //donne Faux parce que les 2 variable font référence à 2 instances différentes
+        System.out.println("r1 == r1Copie" + (r1 == r1Copie));
+        //System.out.println("r1.equals(r2)" + r1.equals(r2));
 
         System.out.println("equals : la comparaison de la même instance devrait donner true");
-      //  System.out.println(r1.equals(r1));
+        System.out.println(r1.equals(r1));
 
         System.out.println("equals : la comparaison avec un rectangle null retourne false");
-     //   System.out.println(r1.equals(rNull));
+        System.out.println(r1.equals(rNull));
 
         System.out.println("equals : la comparaison d'une variable de types différents retourne false");
-   //     System.out.println(r1.equals(this));
-   //     System.out.println(r1.equals("chat"));
+        System.out.println(r1.equals(this)); //ici this est une instance de  RectangleTest : donc faux
+        System.out.println(r1.equals("chat"));
 
         System.out.println("equals : la comparaison de 2 instances de rectangle avec des hauteurs différentes retourne false");
         System.out.println(r1.equals(r2));
