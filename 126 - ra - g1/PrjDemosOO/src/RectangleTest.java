@@ -1,5 +1,3 @@
-
-
 public class RectangleTest {
     public RectangleTest() {
 
@@ -11,21 +9,23 @@ public class RectangleTest {
         testerEgalite();
     }
 
+    //ref : https://www.java67.com/2012/11/difference-between-operator-and-equals-method-in.html
     private void testerEgalite() {
         Rectangle r1 = new Rectangle(14, 33);
-        Rectangle r1HDif = new Rectangle(7, 33);
-        Rectangle r1LDif = new Rectangle(14, 3);
         Rectangle r1Pareil = new Rectangle(14, 33);
         Rectangle r1Ref = r1;
+
+        Rectangle r1HDif = new Rectangle(7, 33);
+        Rectangle r1LDif = new Rectangle(14, 3);
         Rectangle rNull = null;
         String s1 = "chat";
         String s2 = "chat";
 
-        System.out.println("r1 == r2 ? " + (r1 == r1Pareil));
+        System.out.println("r1 == r1Pareil ? " + (r1 == r1Pareil));
         System.out.println("r1 == r1Ref ? " + (r1 == r1Ref));
 
-//        System.out.println("r1.equals(r2)" + r1.equals(r2));
-//        System.out.println(" s1.equals(s2)" + s1.equals(s2));
+        System.out.println("r1.equals(r1Pareil)" + r1.equals(r1Pareil));
+        System.out.println(" s1.equals(s2)" + s1.equals(s2));
 
         System.out.println("equals : la comparaison de la même instance devrait donner true");
         System.out.println("r1.equals(r1) ? " + r1.equals(r1));
@@ -34,10 +34,11 @@ public class RectangleTest {
 
         System.out.println("equals : la comparaison avec un rectangle null retourne false");
         System.out.println("r1.equals(rNull) ? = " + r1.equals(rNull));
+        System.out.println("r1.equals(null) ? = " + r1.equals(null));
 
         System.out.println("equals : la comparaison d'une variable de types différents retourne false");
-        System.out.println("r1.equals(rNull) ? = " + r1.equals(s1));
-
+        System.out.println("r1.equals(s1) ? = " + r1.equals(s1)); //r1 est Rectangle et s1 est String donc différent.
+        System.out.println("r1.equals(this) ? = " + r1.equals(this)); //ici this est de type RectangleTest donc différent de r1 qui est de type Rectangle
 
         System.out.println("equals : la comparaison de 2 instances de rectangle avec des hauteurs différentes retourne false");
         System.out.println("r1.equals(r1HDif) ? " + r1.equals(r1HDif));
@@ -47,12 +48,10 @@ public class RectangleTest {
 
         System.out.println("equals : la comparaison de 2 instances avec la même largeur et hauteur retourne vrai");
         System.out.println("r1.equals(r1Pareil) ? " + r1.equals(r1Pareil));
-
-        // System.out.println("s1 == s2 ? " + (s1 == s2));
     }
 
     private void testerGetAir() {
-        Rectangle r1; //r1 est pour conserver une instance vs Rectangle c'Est la classe. (Structure de l'objet)
+        Rectangle r1; //r1 est pour conserver une instance vs Rectangle c'est la classe. (Structure de l'objet)
         Rectangle r2;
         int h = 2;
         int l = -4;

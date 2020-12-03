@@ -1,5 +1,3 @@
-package prjDemos.src;
-
 public class Cours17DemoTableau {
     public Cours17DemoTableau() {
         demo2();
@@ -11,8 +9,8 @@ public class Cours17DemoTableau {
         afficherTabInt(tab);
         initWithVal(tab, 0);
         afficherTabInt(tab);
-
     }
+
     private void demo2() {
         String s1 = "Bonjour USA";
         String s2;

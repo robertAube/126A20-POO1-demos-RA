@@ -64,14 +64,15 @@ public class Rectangle {
 
     @Override
     public boolean equals(Object o) {
-        boolean egal;
         if (this == o) return true; //Si c'Est la même instance.
-        if (o == null || getClass() != o.getClass()) return false; // si o est null ou les type d'instance ne sont pas les même, on retourne faux.
+//            if (o == null || getClass() != o.getClass()) return false; // si o est null ou les type d'instance ne sont pas les même, on retourne faux.
+        if (o == null || !(o instanceof Rectangle)) //même signification que la ligne précédente en commentaire
+            return false; // si o est null ou les type d'instance ne sont pas les même, on retourne faux.
 
-        Rectangle rectangle = (Rectangle) o;
+        Rectangle rectangle = (Rectangle) o; //cast d'une variable o
 
         if (this.hauteur != rectangle.hauteur) return false;
-        return largeur == ((Rectangle)o).largeur;
+        return largeur == ((Rectangle) o).largeur;
     }
 
 

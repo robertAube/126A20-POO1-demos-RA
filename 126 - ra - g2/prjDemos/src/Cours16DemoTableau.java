@@ -1,5 +1,3 @@
-package prjDemos.src;
-
 public class Cours16DemoTableau {
     public Cours16DemoTableau() {
         demoDeclarationTableau();

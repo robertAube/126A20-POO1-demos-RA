@@ -4,14 +4,14 @@ public class AppJouerAuRectangle {
     }
 
     private void Jeu1() {
-        Rectangle r;
+        MonRectangle r;
         int hauteurLu;
         int largeurLu;
 
         hauteurLu = Util.lireEntierEntreBornes("Donner la hauteur : ", 0, 400);
         largeurLu = Util.lireEntierEntreBornes("Donner la largeur : ", 0, 400);
 
-        r = new Rectangle(hauteurLu, largeurLu);
+        r = new MonRectangle(hauteurLu, largeurLu);
 
         System.out.println(r);
     }
