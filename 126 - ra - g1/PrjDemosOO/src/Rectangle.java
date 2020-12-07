@@ -62,6 +62,7 @@ public class Rectangle {
         return estValide;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true; //Si c'Est la même instance.
@@ -74,7 +75,6 @@ public class Rectangle {
         if (this.hauteur != rectangle.hauteur) return false;
         return largeur == ((Rectangle) o).largeur;
     }
-
 
     public String toString() {
         String s;
