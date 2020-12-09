@@ -29,7 +29,6 @@ public class Cours26Switch {
                 break;
             default:
                 throw new IllegalArgumentException("Exception : Jour invalide = " + noJour);
-
         }
         return strJour;
     }

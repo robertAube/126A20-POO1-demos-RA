@@ -1,6 +1,11 @@
 public class SolQuiz4 {
     public SolQuiz4() {
-        testerGetNbCarInStr();
+    //    testerGetNbCarInStr();
+        testerLireCharValide();
+    }
+
+    private void testerLireCharValide() {
+        System.out.println(lireCharValide("o ou n", "on"));
     }
 
     private void testerGetNbCarInStr() {
@@ -9,6 +14,20 @@ public class SolQuiz4 {
         System.out.println(getNbCarInStr ('x', "Bonjour Annabelle!") == 0);
         System.out.println(getNbCarInStr (' ', "Bonjour Annabelle!") == 1);
         System.out.println(getNbCarInStr ('x', "") == 0);
+    }
+
+
+    private char lireCharValide(String question, String repValide) {
+        String strLu;
+        boolean reponseValide = false;
+        do {
+            strLu = Util.lireString(question);
+            if (strLu.length() > 0)
+                reponseValide = getNbCarInStr(strLu.charAt(0),repValide) == 1;
+
+        } while (!reponseValide);
+
+        return strLu.charAt(0);
     }
 
     private int getNbCarInStr(char car, String str) {
